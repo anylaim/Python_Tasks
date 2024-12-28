@@ -8,3 +8,4 @@ def get_multiplied_digits(numbers) :
 
 
 print(get_multiplied_digits(50436))
+print(get_multiplied_digits(12345))
