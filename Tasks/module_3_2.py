@@ -1,7 +1,7 @@
 variants = (".ru", ".com", ".net")
 
 def send_email(string, recipient, sender = "university.help@gmail.com") :
-    if "@" not in sender or not sender.endswith(variants) or ' ' not in sender :
+    if "@" not in sender or not sender.endswith(variants) :
         print("Невозможно отправить письмо с адреса", sender,  "на адрес", recipient + ".")
     elif recipient == sender :
         print("Нельзя отправить письмо самому себе!")
@@ -11,22 +11,12 @@ def send_email(string, recipient, sender = "university.help@gmail.com") :
         print("НЕСТАНДАРТНЫЙ ОТПРАВИТЕЛЬ! Письмо отправлено с адреса", sender, "на адрес" + recipient + ".")
 
 
-email = input("Введите почту отправителя или пробел:")
-send_to = None
-while send_to == None :
-    check = input("Введите почту получателя: ")
-    if "@" in check and check.endswith(variants) and ' ' not in check:
-        send_to = check
-        break
-    else :
-        print("Некорректно введённый адрес! Используйте адреса (.ru/.com/.net")
-        continue
 
+send_email('Это сообщение для проверки связи', 'vasyok1337@gmail.com')
 
+send_email('Вы видите это сообщение как лучший студент курса!', 'urban.fan@mail.ru', sender='urban.info@gmail.com')
 
-content = input("Введите сообщение: ")
+send_email('Пожалуйста, исправьте задание', 'urban.student@mail.ru', sender='urban.teacher@mail.uk')
 
-if email == " " :
-    send_email(content, send_to)
-else :
-    send_email(content, send_to, email)
+send_email('Напоминаю самому себе о вебинаре', 'urban.teacher@mail.ru', sender='urban.teacher@mail.ru')
+
