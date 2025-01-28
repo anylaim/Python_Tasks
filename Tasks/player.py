@@ -66,7 +66,7 @@ class UrTube :
             print("Войдите в аккаунт, чтобы смотреть видео")
 
 
-    def __contains__(self, video):
+    def __contains__(self, video) :
         return video.title in [vid.title for vid in self.videos]
 
 
