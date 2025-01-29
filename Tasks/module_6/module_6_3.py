@@ -46,7 +46,7 @@ class AquaticAnimal(Animal) :
     _DEGREE_OF_DANGER = 3
 
     def dive_in(self, dz) :
-        self.move(0, 0, -abs(dz)/2)
+        super().move(0, 0, -abs(dz)/2)
 
 class PoisonousAnimal(Animal) :
     _DEGREE_OF_DANGER = 8
