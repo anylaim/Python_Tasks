@@ -91,7 +91,6 @@ cube1 = Cube((222, 35, 130), 6)
 
 
 
-
 circle1.set_color(55, 66, 77)
 print(circle1.get_color())
 cube1.set_color(300, 70, 15)
